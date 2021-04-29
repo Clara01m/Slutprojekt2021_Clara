@@ -12,7 +12,7 @@ namespace Projektet
         public string Name = "";
         public List<string> words = new List<string>();
 
-
+        
 
 
          public void Hi()
