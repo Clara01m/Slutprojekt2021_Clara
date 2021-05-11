@@ -5,16 +5,16 @@ namespace Projektet
 {
     public class Frog
     {
-        static Random generator = new Random();
-        public int Hunger = 20; 
-        public int Boredome = 0; 
-        bool isAlive = true;
-        public string Name = "";
-        public List<string> words = new List<string>();
+        private static Random generator = new Random();
+        private int Hunger = 20; 
+        private int Boredome = 0; 
+        private bool isAlive = true;
+        private string Name = "";
+        private List<string> words = new List<string>();
         
         
         //Inkappslingen är nytt, inte taget ifrån tamagochi spelet vi gjort förut. 
-        public void SetHunger(int newHunger)
+        public virtual void SetHunger(int newHunger)
         {
             Hunger = Math.Max(newHunger, 0);
         }

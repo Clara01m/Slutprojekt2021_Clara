@@ -1,0 +1,13 @@
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\bin\Debug\netcoreapp3.1\Projektet.exe
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\bin\Debug\netcoreapp3.1\Projektet.deps.json
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\bin\Debug\netcoreapp3.1\Projektet.runtimeconfig.json
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\bin\Debug\netcoreapp3.1\Projektet.runtimeconfig.dev.json
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\bin\Debug\netcoreapp3.1\Projektet.dll
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\bin\Debug\netcoreapp3.1\Projektet.pdb
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\obj\Debug\netcoreapp3.1\Projektet.csprojAssemblyReference.cache
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\obj\Debug\netcoreapp3.1\Projektet.AssemblyInfoInputs.cache
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\obj\Debug\netcoreapp3.1\Projektet.AssemblyInfo.cs
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\obj\Debug\netcoreapp3.1\Projektet.csproj.CoreCompileInputs.cache
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\obj\Debug\netcoreapp3.1\Projektet.dll
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\obj\Debug\netcoreapp3.1\Projektet.pdb
+C:\Users\clara.mahlgard\Documents\GitHub\Slutprojekt2021\Projektet\obj\Debug\netcoreapp3.1\Projektet.genruntimeconfig.cache
