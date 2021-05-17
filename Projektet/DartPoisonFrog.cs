@@ -8,7 +8,7 @@ namespace Projektet
 
         public DartPoisonFrog()
         {
-            SetHunger(3000);
+            SetHunger(20);
         }
 
     }
