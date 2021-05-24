@@ -52,6 +52,8 @@ namespace Projektet
             System.Console.WriteLine(CurrentFrog.GetHunger());
             Console.ReadLine();
 
+            
+
 
             // löser detta när jag hr extra tid
             // DateTime.Now
@@ -62,7 +64,7 @@ namespace Projektet
             //DateTime d2 = new DateTime(d);
 
 
-        // 1 arv, 1 generiska, /inkapslng, /tryparse, 1 utbyte mellan instanser. 
+        // / arv, 1 generiska, /inkapslng, /tryparse, / utbyte mellan instanser. 
 
 
 

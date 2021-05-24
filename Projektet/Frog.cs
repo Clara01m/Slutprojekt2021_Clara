@@ -9,11 +9,15 @@ namespace Projektet
         private int Hunger = 20; 
         private int Boredome = 0; 
         private bool isAlive = true;
-        private string Name = "";
+        private string Name;
         private List<string> words = new List<string>();
         
         
         //Inkappslingen är nytt, inte taget ifrån tamagochi spelet vi gjort förut. 
+        public virtual void SetName (string newName)
+        {
+            Name = "";
+        }
         public virtual void SetHunger(int newHunger)
         {
             Hunger = Math.Max(newHunger, 0);
@@ -38,9 +42,10 @@ namespace Projektet
             ReduceBoredom();
         }
 
-        public void Feed()
+        public void Feed(Food food)
         {
-            Hunger++;
+            Hunger += food.getNourishment();
+            Boredome--;
         }
         public void ReduceBoredom()
         { 
