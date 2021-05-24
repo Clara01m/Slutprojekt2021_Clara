@@ -6,6 +6,8 @@ namespace Projektet
     {
         static void Main(string[] args)
         {
+            bool gameRunning = true; 
+
             Console.WriteLine("Welcome to your new job at the Froggy Daycare");
             Console.WriteLine("Your job is to keep them all happy and healthy");
             
@@ -46,39 +48,47 @@ namespace Projektet
             System.Console.WriteLine("What would you like to call this frog?" );
             String nickname = System.Console.ReadLine();
             CurrentFrog.SetName(nickname);
-            
-            System.Console.WriteLine("What would you like to do with" + CurrentFrog );
-            System.Console.WriteLine("1) teach a new word  2) talk  3)feed frog  4) Check how the frog is feeling ");
-            String answer2 = Console.ReadLine();
-            int answ2; 
-            bool convert2 = int.TryParse(answer2, out answ2);
-            if (answ2 == 1)
-            {
-                System.Console.WriteLine("What would you like to teach the frog. One word only, they're not the best at speaking");
-                String newWord = Console.ReadLine();
-                 CurrentFrog.Teach(newWord);
-               
-            }
-            else if (answ2 == 2)
-            {
-                CurrentFrog.Hi(); 
-            }
-            else if (answ2 == 3)
-            {
-                Food.foodList.Enqueue(new Veggies());
-                Food.foodList.Enqueue(new insects());
-                CurrentFrog.Feed();
 
-            }
-            else if (answ2 == 4)
+            while (gameRunning==true)
             {
-                    CurrentFrog.PrintStats(); 
-            }
-             else 
-            {
-                 System.Console.WriteLine("inncorrect answer, you options are 1) teach a new word  2) talk  3)feed frog  4) Check how the frog is feeling ");
-            }
+                
+                System.Console.WriteLine("What would you like to do with " + nickname );
+                System.Console.WriteLine("1) teach a new word  2) talk  3)feed frog  4) Check how the frog is feeling ");
+                String answer2 = Console.ReadLine();
+                int answ2; 
+                bool convert2 = int.TryParse(answer2, out answ2);
+                if (answ2 == 1)
+                {
+                    System.Console.WriteLine("What would you like to teach the frog. One word only, they're not the best at speaking");
+                    String newWord = Console.ReadLine();
+                    CurrentFrog.Teach(newWord);
+                    System.Console.WriteLine("He now knows " + newWord);
+                    CurrentFrog.Tick();
+                
+                }
+                else if (answ2 == 2)
+                {
+                    CurrentFrog.Hi(); 
+                    CurrentFrog.Tick();
+                }
+                else if (answ2 == 3)
+                {
+                    Food.foodList.Enqueue(new Veggies());
+                    Food.foodList.Enqueue(new insects());
+                    CurrentFrog.Feed();
+                    CurrentFrog.Tick();
 
+                }
+                else if (answ2 == 4)
+                {
+                        CurrentFrog.GetAlive();
+                        CurrentFrog.PrintStats(); 
+                }
+                else 
+                {
+                    System.Console.WriteLine("inncorrect answer, you options are 1) teach a new word  2) talk  3)feed frog  4) Check how the frog is feeling ");
+                }
+            }
             
 
             // löser detta när jag hr extra tid

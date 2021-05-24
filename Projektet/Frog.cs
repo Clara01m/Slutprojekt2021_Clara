@@ -54,6 +54,7 @@ namespace Projektet
             Food tempfood = Food.foodList.Dequeue();
             Hunger += tempfood.getNourishment();
             Boredome--;
+            PrintStats();
             if(generator.Next(0,2) == 0)
             {
                 Food.foodList.Enqueue(new Veggies());
