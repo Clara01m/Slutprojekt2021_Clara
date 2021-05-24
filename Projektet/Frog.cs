@@ -16,8 +16,14 @@ namespace Projektet
         //Inkappslingen är nytt, inte taget ifrån tamagochi spelet vi gjort förut. 
         public virtual void SetName (string newName)
         {
-            Name = "";
+            Name = newName;
         }
+        public string getName ()
+        {
+            return Name;
+        }
+
+        //kontrollera hungern med inkapsling
         public virtual void SetHunger(int newHunger)
         {
             Hunger = Math.Max(newHunger, 0);
@@ -27,6 +33,13 @@ namespace Projektet
         {
             return Hunger;
         }
+        //Lär grodan ett ord :) 
+        public void Teach(string word)
+        {
+            words.Add(word); 
+            ReduceBoredom();
+        }
+        //Få grodan att säga ett av orden 
          public void Hi()
         { 
             int wordIndex = generator.Next(words.Count);
@@ -35,14 +48,8 @@ namespace Projektet
 
             ReduceBoredom();
         }
-
-        public void Teach(string word)
-        {
-            words.Add(word); 
-            ReduceBoredom();
-        }
-
-        public void Feed(Food food)
+        // Mata grodan, kopplad till klassen food med en queue
+        public void Feed()
         {
             Food tempfood = Food.foodList.Dequeue();
             Hunger += tempfood.getNourishment();
@@ -55,18 +62,19 @@ namespace Projektet
             {
                 Food.foodList.Enqueue(new insects());
             }
-            
+          // denna används i andra instanser här för att minska boredome  
             
         }
         public void ReduceBoredom()
         { 
             Boredome --; 
         }
-
+        // detta ger ut ens viktigaste stats
         public void PrintStats()
         { 
-            Console.WriteLine(Hunger + Boredome);
+            Console.WriteLine("Your hunger is at " + Hunger + ", don't reach 0. Your boredome is at " + Boredome + ", don't reach 20");
         }
+        // denna checkar om grodan mår bra, annars förlorar man grodan
         public string GetAlive ()
         {
             string returnString;
@@ -82,11 +90,12 @@ namespace Projektet
                 return returnString;
             }
         }
+        // denna går ner för att grodan mår dåligt om den blir lämnad ensam för länge
          public void Tick()
         {
             Hunger --; 
             Boredome ++;
-            if (Hunger<0 || Boredome>15)
+            if (Hunger<0 || Boredome>20)
             {
                 isAlive = false; 
             }

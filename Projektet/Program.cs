@@ -44,32 +44,49 @@ namespace Projektet
             }
             // min favorit lösning i koden är att använda CurrentFrog för att inte ehöva skriva samma kod för varje groda seppart
             System.Console.WriteLine("What would you like to call this frog?" );
+            String nickname = System.Console.ReadLine();
+            CurrentFrog.SetName(nickname);
             
             System.Console.WriteLine("What would you like to do with" + CurrentFrog );
-            System.Console.WriteLine();
-            System.Console.ReadLine();
-            
-            System.Console.WriteLine(CurrentFrog.GetHunger());
-            Console.ReadLine();
+            System.Console.WriteLine("1) teach a new word  2) talk  3)feed frog  4) Check how the frog is feeling ");
+            String answer2 = Console.ReadLine();
+            int answ2; 
+            bool convert2 = int.TryParse(answer2, out answ2);
+            if (answ2 == 1)
+            {
+                System.Console.WriteLine("What would you like to teach the frog. One word only, they're not the best at speaking");
+                String newWord = Console.ReadLine();
+                 CurrentFrog.Teach(newWord);
+               
+            }
+            else if (answ2 == 2)
+            {
+                CurrentFrog.Hi(); 
+            }
+            else if (answ2 == 3)
+            {
+                Food.foodList.Enqueue(new Veggies());
+                Food.foodList.Enqueue(new insects());
+                CurrentFrog.Feed();
+
+            }
+            else if (answ2 == 4)
+            {
+                    CurrentFrog.PrintStats(); 
+            }
+             else 
+            {
+                 System.Console.WriteLine("inncorrect answer, you options are 1) teach a new word  2) talk  3)feed frog  4) Check how the frog is feeling ");
+            }
 
             
-
 
             // löser detta när jag hr extra tid
             // DateTime.Now
             //DateTime t = new DateTime(1984, 10, 12);
             //TimeSpan r = DateTime.Now - t;
             //string d = DateTime.Now.ToLongDateString();
-
             //DateTime d2 = new DateTime(d);
-
-
-        // / arv, 1 generiska, /inkapslng, /tryparse, / utbyte mellan instanser. 
-
-
-
-
-
 
 
         }
