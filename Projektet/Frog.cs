@@ -44,8 +44,19 @@ namespace Projektet
 
         public void Feed(Food food)
         {
-            Hunger += food.getNourishment();
+            Food tempfood = Food.foodList.Dequeue();
+            Hunger += tempfood.getNourishment();
             Boredome--;
+            if(generator.Next(0,2) == 0)
+            {
+                Food.foodList.Enqueue(new Veggies());
+            }
+            else
+            {
+                Food.foodList.Enqueue(new insects());
+            }
+            
+            
         }
         public void ReduceBoredom()
         { 
